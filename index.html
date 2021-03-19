@@ -3,14 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Promo Nómina Electrónica</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style type="text/css">
+    body {
+      font-family: 'Poppins', sans-serif;
+      font-weight: bold;
+      font-size: 32px
+    }
+  </style>
 </head>
 <body>
   <p id="demo"></p>
 </body>
 <script>
   // Set the date we're counting down to
-  var countDownDate = new Date("Jan 5, 2022 15:37:25").getTime();
+  var futureDate = new Date();
+  futureDate.setDate(futureDate.getDate() + 1);
+  var countDownDate = new Date(futureDate.toString()).getTime();
 
   // Update the count down every 1 second
   var x = setInterval(function() {
@@ -28,7 +39,7 @@
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
     // Display the result in the element with id="demo"
-    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+    document.getElementById("demo").innerHTML = hours + "h "
     + minutes + "m " + seconds + "s ";
 
     // If the count down is finished, write some text
